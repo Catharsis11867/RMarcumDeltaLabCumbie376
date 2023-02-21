@@ -50,17 +50,3 @@ let userText = "tsda;fasdfjsa; his is the string to analyze"
 let analyzeResult = analyzeText(userText);
 
 console.log("result is...:", analyzeResult)
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
