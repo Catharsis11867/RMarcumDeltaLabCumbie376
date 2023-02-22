@@ -11,7 +11,7 @@ button.addEventListener("click", function() {
   }
 
   // Get a random spirit animal
-  const animals = ["fox", "wolf", "panther", "tiger", "lion", "bear", "deer", "owl", "eagle", "snake"];
+  const animals = ["scallop", "alaskan king crab", "buoy barnacle", "Gribble", "lobter", "scrimp", "hermit crab", "pea crab", "whale lice", "Remipedia"];
   const animal = animals[Math.floor(Math.random() * animals.length)];
 
   // Display the name fact and spirit animal
