@@ -1,61 +1,19 @@
-$(document).ready(function () {  //iife
-  console.log("doc is ready");
- 
-  let revName; 
+const button = document.getElementById("submit-button");
+const nameInput = document.getElementById("name-input");
+const resultDiv = document.getElementById("result");
 
+button.addEventListener("click", function() {
+  const name = nameInput.value;
 
-  $
-    ("#btnGetFacts").click(function (){
+  if (name === "") {
+    alert("Please enter your name");
+    return;
+  }
 
-      // handle it if input is blank
+  // Get a random spirit animal
+  const animals = ["fox", "wolf", "panther", "tiger", "lion", "bear", "deer", "owl", "eagle", "snake"];
+  const animal = animals[Math.floor(Math.random() * animals.length)];
 
-      let userName = $("#userName").val();
-      let coolFacts = generateCoolNameFacts(userName); 
-
-      console.log('you clicked the button');
-      console.log('from ln 12', generateCoolNameFacts(userName));
-      
-      $("#coolNameFactsOutput").html(coolFacts);
-  
-
-
-    });
-
-
+  // Display the name fact and spirit animal
+  resultDiv.innerHTML = `Did you know that ${name} is an awesome name? Your spirit animal is the ${animal}!`;
 });
-
-function generateCoolNameFacts(userName) {
-  let coolFacts = ''; 
-  
-  coolFacts = nameLength(userName);
-  coolFacts += " <br> " + nameStart(userName);
-  coolFacts += "<h3> " + nameEnd(userName) + "</h3>";
-  coolFacts += "<h2>" + reverseName(userName) + "</h2>"
-
-  console.log("initialized the'm coolFacts variable: " + coolFacts); 
-
-  return coolFacts;
-}
-
-function nameLength(name) {
-  return "Your name is " + name.length + " letters long!"; 
-}
-
-function nameStart(name) {
-  return "the first letter of your name is " + name[0]
-}
-
-function nameEnd(name) {
-  
-  let lastIndex = name.length - 1
-
-  return "the last letter of your name is " + name[lastIndex]
-}
-
-function reverseName(name) {
-  
-  let arrName = name.split(); 
-
-  revName = arrName.reverse();
-     
-}
